@@ -1,1 +1,12 @@
-@import "../bourbon/bourbon"
+@import "../lib/bourbon/bourbon"
+@import "../lib/neat/neat"
+@import "../lib/neat/neat-helpers"
+
+.row
+  color: red
+  @include outer-container
+
+
+.store
+  @include span-columns(3)
+  @include omega(4n)

@@ -3,19 +3,29 @@
 composer.lock
 vendor/
 
+# bower packagist
+node_modules/
+bower_components/
+test/
+tests/
+
 # PHPStorm
 .idea/
 
 #
 .DS_Store
 
-# PHPStorm
-bourbon/
+# libs
+lib/*
 
 # compiled files
 css/*.css
 css/*.css.map
 
+# cache
+.sass-cache/
+
 # top secret
 config/config.php
 config/env*
+

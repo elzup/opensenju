@@ -16,7 +16,12 @@ Open Senju
 
 
 ```sh
+composer install
+bower install
 bourbon install
+mv bourbon lib
+neat install
+mv neat lib
 ```
 
 ## Contribution
