@@ -17,4 +17,5 @@ css/*.css
 css/*.css.map
 
 # top secret
-config.php
+config/config.php
+config/env*
