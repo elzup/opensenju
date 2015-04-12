@@ -1,0 +1,13 @@
+{
+    "name": "elzzup/opensenju",
+    "authors": [
+        {
+            "name": "elzzup",
+            "email": "guild0105@gmail.com"
+        }
+    ],
+    "require": {
+        "j4mie/idiorm": "1.*",
+        "j4mie/paris": "1.*"
+    }
+}
