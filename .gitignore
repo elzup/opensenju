@@ -1,5 +1,6 @@
 
 composer.lock
 vendor/
-note/
 config.php
+.DS_Store
+bourbon/
