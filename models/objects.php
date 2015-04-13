@@ -25,8 +25,12 @@ class Store extends Model {
 
 class Schedule extends Model {
     public function dayc() {
+        return $this::day_to_c($this->day);
+    }
+
+    public static function day_to_c($day_id) {
         $lib = explode(',', ',日,月,火,水,木,金,土');
-        return $lib[$this->day];
+        return $lib[$day_id];
     }
 
     public function start_time_str() {
