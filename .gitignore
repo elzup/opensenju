@@ -21,6 +21,8 @@ lib/*
 # compiled files
 css/*.css
 css/*.css.map
+js/*.js
+js/*.js.map
 
 # cache
 .sass-cache/

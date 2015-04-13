@@ -2,11 +2,17 @@
 @import "../lib/neat/neat"
 @import "../lib/neat/neat-helpers"
 
-.row
-  color: red
-  @include outer-container
 
+.row
+  @include outer-container
 
 .store
   @include span-columns(3)
   @include omega(4n)
+  @include transition (all 0.2s ease-in-out)
+  @include flex(2 2 15em)
+  @include align-self(stretch)
+  $flex-box-border-color: #222
+  $base-background-color: #eee
+  box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%)
+  padding: 20px

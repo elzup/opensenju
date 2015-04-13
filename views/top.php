@@ -7,8 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>オープン千住</title>
-    <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
 </head>
 <body>
 
@@ -20,11 +22,18 @@
         <?php foreach ($stores as $store) { ?>
             <section class="store">
                 <h3><?= $store->name ?></h3>
-                <div class="active_days">
+                <a class="js-accordion-trigger">
+                    <?php foreach ($store->schedules() as $sc) { ?>
+                        <span>
+                            <span class="day"><?= $sc->dayc() ?></span>
+                        </span>
+                    <?php } ?>
+                </a>
+                <div class="active_days submenu">
                     <?php foreach ($store->schedules() as $sc) { ?>
                         <p>
                             <span class="day"><?= $sc->dayc() ?></span>
-                            <p><span class="start"><?= $sc->start_time ?></span> ~ <span class="end"><?= $sc->end_time ?></span></p>
+                            <span class="start"><?= $sc->start_time_str() ?></span>~<span class="end"><?= $sc->end_time_str() ?></span>
                         </p>
                     <?php } ?>
                 </div>
