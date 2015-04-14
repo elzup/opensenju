@@ -11,7 +11,10 @@ class Store extends Model
     public function schedules()
     {
         if (!isset($this->days)) {
-            $this->days = $this->has_many('Schedule', 'store_id')->find_many();
+            $this->days = array();
+            foreach ($this->has_many('Schedule', 'store_id')->find_many() as $sc) {
+                $this->days[$sc->day] = $sc;
+            }
         }
         return $this->days;
     }

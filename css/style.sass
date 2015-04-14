@@ -2,9 +2,39 @@
 @import "../lib/neat/neat"
 @import "../lib/neat/neat-helpers"
 
+$main_color: #FF9900
+$sub_color: #FFCC00
+$back_color: #FFD217
+// $back_color: #FFE166
+$con_color: #00FFE4
+
+body, html
+  background-color: $back_color
+  font-family: "kozl"
+//  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro0"
+
+header
+  @include outer-container
+
+  h1
+    @include shift(2)
+    @include span-columns(8)
+    padding: 20px
+    text-align: center
+    background: #FF9900
+    color: white
+    font-size: 50px
+    i.fa.top
+      @include transform(scale(0.9) rotate(-45deg))
+      font-size: 1.5em
+      margin: 0 20px
+      text-shadow: 5px 5px 5px yellow
 
 .row
   @include outer-container
+
+i
+  padding: 0 5px
 
 .store
   @include span-columns(3)
@@ -16,6 +46,27 @@
   $base-background-color: #eee
   box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%)
   padding: 20px
+  background: #fff
+
+  .next-time
+    background: lightblue
+  &.active
+    .next-time
+      background: pink
+
+  .accodion-button
+    .day
+      text-align: center
+      padding: 1px
+      border: solid 1px
+      &.active
+        border-bottom-color: red
+
+  .next-time
+    .end-time
+      font-size: 2rem
+
+
 
 .active_days
   p
